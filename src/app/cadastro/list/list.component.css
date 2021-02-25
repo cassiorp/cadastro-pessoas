@@ -1,0 +1,28 @@
+
+li {
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 3px;
+}
+
+ul {
+  margin-top: 15px;
+}
+
+.list {
+  display: inline;
+}
+
+.btn-excluir {
+  background-color: #fc6963;
+}
+
+.btn-editar {
+  background-color: #5cb85c;
+  float: right;
+}
+
+.btn-salvar {
+  background-color: #0275d8;
+  float: right;
+}

@@ -1,0 +1,15 @@
+<div class="container-cadastro">
+
+  <div>
+    <app-form (pegaValores)="save($event)"></app-form>
+  </div>
+
+  <div>
+    <app-list
+      [pessoas]="db.pessoas"
+      (eventoExcluir)="delete($event)"
+      (eventoEditar)="update($event)"
+    ></app-list>
+  </div>
+
+</div>

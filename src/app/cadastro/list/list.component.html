@@ -1,0 +1,26 @@
+<div>
+  <ul class="list">
+    <li *ngFor="let pessoa of pessoas">
+      <p>
+        ID: {{pessoa.id}}
+      </p>
+
+      <p>
+        Nome:<input value="{{pessoa.nome}}" [disabled]="isInput" #campoNome>
+      </p>
+
+      <p>
+        Idade:<input [value]="pessoa.idade" [disabled]="isInput" #campoIdade>
+      </p>
+
+      <button (click)="excluiPessoa(pessoa.id)" class="btn-excluir">Excluir</button>
+
+      <button
+        *ngIf="mostraBotaoSalvar" (click)="editarPessoa(pessoa.id, campoNome.value, campoIdade.value)"
+        class="btn-salvar">Salvar
+      </button>
+
+      <button *ngIf="mostraBotaoEditar" (click)="habilitaInput()" class="btn-editar ">Editar</button>
+    </li>
+  </ul>
+</div>
